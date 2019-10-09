@@ -141,7 +141,7 @@ namespace Ksu.Cis300.NameLookup
 
 
         /// <summary>
-        /// 
+        ///  RemoveMinimumKey will return the tree with min key
         /// </summary>
         /// <param name="t"></param>
         /// <param name="min"></param>
@@ -168,7 +168,13 @@ namespace Ksu.Cis300.NameLookup
 
         }
 
-
+        /// <summary>
+        /// this will remove the key and return updated tree
+        /// </summary>
+        /// <param name="key">key to be removedf</param>
+        /// <param name="t">the binary tree node</param>
+        /// <param name="removed">if removed</param>
+        /// <returns></returns>
 
         private static BinaryTreeNode<KeyValuePair<TKey, TValue>> Remove(TKey key, BinaryTreeNode<KeyValuePair<TKey, TValue>> t, out bool removed)
         {
@@ -227,7 +233,11 @@ namespace Ksu.Cis300.NameLookup
 
 
         }
-            
+            /// <summary>
+            /// the public method to return a key
+            /// </summary>
+            /// <param name="k">key to be removed</param>
+            /// <returns></returns>
 
             public bool Remove(TKey k)
             {
